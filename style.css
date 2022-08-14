@@ -1,0 +1,113 @@
+body {
+  min-height: 2000px;
+}
+.jumbotron {
+  padding-top: 100px;
+  padding-bottom: 20px;
+  background-color: #e9967a98;
+}
+
+#tentang {
+  padding: 50px;
+  background-color: #ecbdad70;
+}
+
+/* .row {
+  border: 5px solid brown;
+} */
+
+.thumb a:hover {
+  opacity: 0.6;
+}
+
+/* Overlay */
+.overlay {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 9999;
+  transition: 0.5s;
+  text-align: center;
+  padding: 25px;
+}
+
+.overlay:target {
+  width: auto;
+  height: auto;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.overlay img {
+  max-height: 100%;
+  box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.8);
+}
+
+.overlay:target img {
+  animation: zoomDanFade 1s;
+}
+
+.overlay .close {
+  position: absolute;
+  top: 5px;
+  left: 80%;
+  text-decoration: none;
+  color: black;
+  background-color: white;
+  border: 1px solid black;
+  line-height: 10px;
+  padding: 6px;
+  opacity: 0;
+  margin-top: 1000px;
+}
+
+.overlay:target .close {
+  animation: slideDown 0.5s 0.5s forwards;
+}
+
+/* Animasi */
+@keyframes zoomDanFade {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  100% {
+    transform: 1;
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    margin-top: -20px;
+  }
+
+  100% {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+
+.sertifikat a:hover {
+  opacity: 0.6;
+}
+
+#project {
+  padding: 50px;
+  background-color: #ffe3d99f;
+}
+
+#kontak {
+  padding: 50px;
+  background-color: #ecbdad70;
+}
+
+#footer {
+}
